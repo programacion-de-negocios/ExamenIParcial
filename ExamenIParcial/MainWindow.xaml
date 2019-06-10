@@ -6,7 +6,44 @@
         xmlns:local="clr-namespace:ExamenIParcial"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel Background="CornflowerBlue">
+        <Label Content="CALCULO DE PLANILLA" HorizontalAlignment="Center"/>
+        <Grid Height="300" Width="750" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <Label Content="Nombre" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Identidad" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Horas trabajadas" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Pago por Hora Normal" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Horas extra" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Pago por Hora Extra" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="1" Grid.Row="0" Width="100" Height="20"/>
+            <TextBox Grid.Column="1" Grid.Row="1" Width="100" Height="20"/>
+            <TextBox Grid.Column="1" Grid.Row="2" Width="100" Height="20" Text="{Binding Path=HorasTrabajadas, Mode=TwoWay}"/>
+            <TextBox Grid.Column="1" Grid.Row="3" Width="100" Height="20" Text="{Binding Path=PagoporHora, Mode=TwoWay}"/>
+            <TextBox Grid.Column="1" Grid.Row="4" Width="100" Height="20" Text="{Binding Path=HorasExtra, Mode=TwoWay}"/>
+            <TextBox Grid.Column="1" Grid.Row="5" Width="100" Height="20" Text="{Binding Path=PagoporExtra, Mode=TwoWay}"/>
+            <Label Content="Sueldo sin deducciones" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Sueldo por horas extras" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Deducciones realizadas" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Sueldo total" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="3" Grid.Row="0" Width="100" Height="20" Text="{Binding Path=SueldosinDeduccion, Mode=TwoWay}"/>
+            <TextBox Grid.Column="3" Grid.Row="1" Width="100" Height="20" Text="{Binding Path=SueldoporExtra, Mode=TwoWay}"/>
+            <TextBox Grid.Column="3" Grid.Row="2" Width="100" Height="20" Text="{Binding Path=DeduccionTotal, Mode=TwoWay}"/>
+            <TextBox Grid.Column="3" Grid.Row="3" Width="100" Height="20" Text="{Binding Path=SueldoTotal, Mode=TwoWay}"/>
+        </Grid>
+    </StackPanel>
 </Window>

@@ -20,9 +20,12 @@ namespace ExamenIParcial
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Empleado Elempleado { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            Elempleado = new Empleado { HorasTrabajadas = "2", PagoporHora = "2", HorasExtra="3", PagoporExtra="3"};
+            this.DataContext = Elempleado;
         }
     }
 }
